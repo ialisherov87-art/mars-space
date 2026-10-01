@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  background-color: #2b2c36;
+  color: white;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+.header {
+  background-color: #2b3844;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+  height: 80px;
+}
+
+.header-inner {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.mode-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* SEARCH */
+.search {
+  width: 480px;
+  height: 56px;
+  margin-top: 48px;
+  background-color: #2b3844;
+  border-radius: 5px;
+  box-shadow: 0 2px 9px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  padding-left: 32px;
+}
+
+.search img {
+  width: 18px;
+  height: 18px;
+}
+
+.search input {
+  width: 100%;
+  margin-left: 24px;
+  background: none;
+  border: none;
+  outline: none;
+  color: white;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.search input::placeholder {
+  color: white;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 264px);
+  justify-content: space-between;
+  row-gap: 75px;
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+
+.card {
+  width: 264px;
+  height: 250px;
+  background-color: #2b3844;
+  border-radius: 5px;
+  box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.card img:hover {
+  transform: scale(1.03);
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 800;
+  text-align: center;
+  margin-top: 24px;
+}
+
+/* LIGHTBOX (ПОЛНОЭКРАННЫЙ ПРОСМОТР) */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 8px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+  object-fit: contain;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+}
+
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: none;
+  font-size: 30px;
+  padding: 16px 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  user-select: none;
+  transition: background 0.2s;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.lightbox-prev {
+  left: 30px;
+}
+
+.lightbox-next {
+  right: 30px;
+}
+
+/* АДАПТИВНОСТЬ */
+@media (max-width: 1300px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .cards {
+    grid-template-columns: repeat(3, 264px);
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    padding: 0 34px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .search {
+    width: 100%;
+    height: 100px;
+    margin-top: 58px;
+    padding-left: 50px;
+  }
+
+  .search img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .search input {
+    font-size: 18px;
+    margin-left: 28px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 264px);
+    row-gap: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .logo {
+    font-size: 14px;
+  }
+
+  .mode-btn {
+    font-size: 12px;
+  }
+
+  .search {
+    height: 48px;
+    margin-top: 24px;
+    padding-left: 32px;
+  }
+
+  .search img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .search input {
+    font-size: 12px;
+    margin-left: 26px;
+  }
+
+  .cards {
+    grid-template-columns: 264px;
+    justify-content: center;
+    row-gap: 126px;
+    margin-top: 120px;
+  }
+}

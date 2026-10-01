@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Where in the world?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-inner">
+      <h1 class="logo">Where in the world?</h1>
+      <button class="mode-btn">Dark Mode</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="search">
+      <img src="images/search.svg" alt="search">
+      <input type="text" placeholder="Search for a country...">
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <img src="./1280px-Flag_of_Germany.svg (2).png" alt="Germany">
+        <h3>Germany</h3>
+      </div>
+      <div class="card">
+        <img src="./1280px-Flag_of_Germany.svg (3).png" alt="USA">
+        <h3>United States of America</h3>
+      </div>
+      <div class="card">
+        <img src="./1280px-Flag_of_Germany.svg (4).png" alt="Brazil">
+        <h3>Brazil</h3>
+      </div>
+      <div class="card">
+        <img src="./1280px-Flag_of_Germany.svg (5).png" alt="Iceland">
+        <h3>Iceland</h3>
+      </div>
+      <div class="card">
+        <img src="./1280px-Flag_of_Germany.svg (6).png" alt="Afghanistan">
+        <h3>Afghanistan</h3>
+      </div>
+      <div class="card">
+        <img src="./1280px-Flag_of_Germany.svg (7).png" alt="Aland Islands">
+        <h3>Aland Islands</h3>
+      </div>
+      <div class="card">
+        <img src="./1280px-Flag_of_Germany.svg (8).png" alt="Albania">
+        <h3>Albania</h3>
+      </div>
+      <div class="card">
+        <img src="./1280px-Flag_of_Germany.svg (9).png" alt="Algeria">
+        <h3>Algeria</h3>
+      </div>
+    </div>
+  </main>
+
+  <!-- Модальное окно (Lightbox) -->
+  <div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <button class="lightbox-prev">&#10094;</button>
+    <img class="lightbox-content" id="lightbox-img" alt="Enlarged photo">
+    <button class="lightbox-next">&#10095;</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
